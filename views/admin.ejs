@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Header-icon -->
+    <link rel="icon" href="/imgs/nos-e-amarras.jpg">
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="/style.css">
+    <!-- Box Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Site - Admin</title>
+</head>
+<body class="admin">
+    
+    <% if(no == null) { %>
+    <header class="admin-and-update">
+        <a href="/"><i class='bx bx-arrow-to-left back-home'></i></a>
+    </header>
+    <% } %>
+
+    <% if(no != null) { %>
+    <header class="admin-and-update">
+        <a href="/admin"><i class='bx bx-arrow-to-left back-home'></i></a>
+    </header>
+    <% } %>
+    
+
+    <% if(no == null) { %>
+    <form id="create-form" action="/create" method="post">
+        <h1 id="title-page">Cadastrar Nó</h1>
+        <div class="align-content">
+            <label for="name">Nome:</label>
+            <input type="text" name="name" id="name" required>
+
+            <label for="type">Categoria:</label>
+            <input type="text" name="type" id="type">
+
+            <label>Nível:</label>
+            <select name="nivel" id="nivel">
+              <option></option>
+              <option>Básico</option>
+              <option>Intermediário</option>
+              <option>Avançado</option>
+            </select>
+
+            <label for="linkImage">Link da Imagem:</label>
+            <input type="text" name="linkImage" id="linkImage">
+
+            <label for="linkVideo">Link do Vídeo:</label>
+            <input type="text" name="linkVideo" id="linkImage">
+
+            <label for="description">Descrição:</label>
+            <textarea type="text" name="description" id="description"></textarea>
+
+            <button type="submit" class="sub">Cadastrar</button>
+        </div>
+    </form>
+    <% } %>
+
+    
+    <% if (no != null) { %>
+    <form id="update-form" action="/update/<%= no._id%>" method="post">
+        <h1 id="title-page">Atualizar Nó</h1>
+        <div class="align-content">
+            <label for="name">Nome:</label>
+            <input type="text" name="name" id="name" value="<%= no.name%>">
+            
+            <label for="type">Categoria:</label>
+            <input type="text" name="type" id="type" value="<%= no.type%>">
+            
+            <label for="nivel">Nível:</label>
+            <select type="text" name="nivel" id="nivel">
+              <% if (no.nivel == "Básico") { %>
+              <option></option>
+              <option selected>Básico</option>
+              <option>Intermediário</option>
+              <option>Avançado</option>
+              <% } %>
+              <% if (no.nivel == "Intermediário") { %>
+              <option></option>
+              <option>Básico</option>
+              <option selected>Intermediário</option>
+              <option>Avançado</option>
+              <% } %>
+              <% if (no.nivel == "Avançado") { %>
+              <option></option>
+              <option>Básico</option>
+              <option>Intermediário</option>
+              <option selected>Avançado</option>
+              <% } %>
+            </select>
+
+            <label for="linkImage">Link da Imagem:</label>
+            <input type="text" name="linkImage" id="linkImage" value="<%= no.linkImage%>">
+
+            <label for="linkVideo">Link do Vídeo:</label>
+            <input type="text" name="linkVideo" id="linkImage" value="<%= no.linkVideo%>">
+
+            <label for="description">Descrição:</label>
+            <textarea type="text" name="description" id="description"><%= no.description%></textarea>
+
+            <button type="submit" class="sub">Atualizar</button>
+        </div>
+    </form>
+    <% } %>
+
+    
+    <% if (no == null) { %>
+    <section class="se-foo">
+        <h2>Tabela de Nós</h2>
+        <div id="container">
+            <% group.forEach((no) => { %>
+            <div class="nada">
+              <div class="image-no">
+                <a href="/page/<%= no._id%>" class="td-link">
+                  <img src="<%= no.linkImage%>" alt="<%= no.name%>" />
+                </a>
+              </div>
+              <div class="name-no">
+                <a href="/page/<%= no._id%>">
+                  <h3><%= no.name%></h3>
+                </a>
+              </div>
+              <div class="buttons">
+                <a href="/by/<%= no._id%>/edit" id="edit" class="default-button">Editar</a>
+                <a href="/by/<%= no._id%>/delete" id="delete" class="default-button">Apagar</a>
+              </div>
+            </div>
+            <% }) %>
+        </div>
+    </section>
+    <% } %>
+
+    
+    <% if (noDel != null) { %>
+    <section class="modal">
+        <div class="card">
+          <div class="float">
+            <a id="close-modal" href="/admin"><i class='bx bx-x'></i></a>
+            <h2><%= noDel.name%></h2>
+          </div>
+          <hr>
+
+          <p>Deseja realmente apagar este nó?</p>
+
+          <div class="confirm">
+            <a id="return" href="/admin">Não</a>
+            <a id="no-deleted" href="/delete/<%= noDel._id%>">Sim</a>
+          </div>
+        </div>
+    </section>
+    <% } %>
+</body>
+</html>

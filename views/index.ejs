@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Header-icon -->
+  <link rel="icon"  href="/imgs/nos-e-amarras.jpg">
+  <!-- Link to CSS -->
+  <link rel="stylesheet" href="/style.css" />
+  <!-- Box Icons -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <title>Nós e Amarras</title>
+</head>
+
+<body>
+  <header class="header-search tiger">
+    <h1 id="title-page">Nós e Amarras
+      <img src="/imgs/nos-e-amarras.jpg" alt="" id="img-especiality">
+    </h1>
+    <label class="container-label">
+      <input id="search-no" type="text" placeholder="Digite um Nó" />
+      <i class='bx bx-search icon-search'></i>
+    </label>
+  </header>
+
+  <main>
+    <div id="container">
+      <% group.forEach((no)=> { %>
+        <div class="nada">
+          <div class="image-no">
+            <a href="/page/<%= no._id%>" class="td-link">
+              <img src="<%= no.linkImage%>" alt="<%= no.name%>" />
+            </a>
+          </div>
+          <div class="name-no">
+            <a href="/page/<%= no._id%>">
+              <h3>
+                <%= no.name%>
+              </h3>
+            </a>
+            <% if (no.type) { %>
+              <h3 class="type">Tipo: <%= no.type%></h3>
+            <% } %>
+            <% if (no.nivel) { %>
+              <h3 class="type">Nível: <%= no.nivel%></h3>
+            <% } %>
+          </div>
+        </div>
+        <% }) %>
+    </div>
+  </main>
+  <script src="/script.js"></script>
+</body>
+
+</html>

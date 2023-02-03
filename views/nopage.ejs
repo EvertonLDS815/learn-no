@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Header-icon -->
+    <link rel="icon" href="/imgs/nos-e-amarras.jpg">
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="/style.css">
+    <!-- Box Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title><%= no.name%></title>
+</head>
+<body class="admin">
+
+    <header class="admin-and-update">
+        <a href="/"><i class='bx bxs-home homepage'></i></a>
+    </header>
+    
+    <div class="container">
+        <h1><%= no.name%></h1>
+        <i onclick="goBack()" class='bx bx-arrow-back back-left'></i>
+
+        <div class="content">
+            <p id="parag"><%= no.description%></p>
+            <div class="agrup">
+                <a href="<%= no.linkImage%>" target="_blank">
+                    <img src="<%= no.linkImage%>" alt="<%= no.name%>">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <% if (no.linkVideo) { %>
+        <p class="parag-video">Quer assistir o vídeo?? <a href="<%= no.linkVideo%>" target="_blank">Clique aqui</a></p>
+    <% } %>
+
+<script src="/script.js"></script>
+</body>
+</html>
