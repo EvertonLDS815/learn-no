@@ -144,6 +144,7 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 10px;
 }
 .container h1 {
     text-align: center;
@@ -368,7 +369,7 @@ img {
     color: white;
 }
 #img-especiality {
-    width: 100px;
+    width: 83px;
 }
 .nada-special {
     width: 50px;
@@ -448,6 +449,7 @@ img {
     }
     .container h1, #title-page {
         font-size: 27px;
+        padding: 14px 0;
     }
     .container h1 {
         padding: 0 25px;
@@ -522,6 +524,6 @@ img {
         width: 100%;
     }
     #img-especiality {
-        width: 22vw;
+        width: 24vw;
     }
 }
