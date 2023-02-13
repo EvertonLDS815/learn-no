@@ -415,7 +415,7 @@ img {
         gap: 25px;
     }
     .agrup a {
-        width: 280px;
+        width: 300px;
     }
     .modal .card {
         width: 70vw;
@@ -425,6 +425,9 @@ img {
     .container-label {
         margin: 0 auto;
         width: 330px;
+    }
+    .container {
+        width: 85vw;
     }
     .container h1 {
         font-size: 28px;
@@ -461,7 +464,7 @@ img {
         left: 14px;
     }
     .agrup a {
-        width: 56vw;
+        width: 95%;
     }
     .modal .card {
         width: 90vw;
@@ -479,9 +482,6 @@ img {
     }
     main {
         padding: 26px 0;
-    }
-    .container {
-        width: 85vw;
     }
     .nada {
         width: 78vw;
