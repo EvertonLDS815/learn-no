@@ -77,18 +77,21 @@
               <option selected>Básico</option>
               <option>Intermediário</option>
               <option>Avançado</option>
-              <% } %>
-              <% if (no.nivel == "Intermediário") { %>
+              <% } else if (no.nivel == "Intermediário") { %>
               <option></option>
               <option>Básico</option>
               <option selected>Intermediário</option>
               <option>Avançado</option>
-              <% } %>
-              <% if (no.nivel == "Avançado") { %>
+              <% } else if (no.nivel == "Avançado") { %>
               <option></option>
               <option>Básico</option>
               <option>Intermediário</option>
               <option selected>Avançado</option>
+              <% } else { %>
+              <option selected></option>
+              <option>Básico</option>
+              <option>Intermediário</option>
+              <option>Avançado</option>
               <% } %>
             </select>
 

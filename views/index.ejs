@@ -27,6 +27,7 @@
   <main>
     <div id="container">
       <% group.forEach((no)=> { %>
+        <% if (no.linkImage) { %>
         <div class="nada">
           <div class="image-no">
             <a href="/page/<%= no._id%>" class="td-link">
@@ -47,6 +48,7 @@
             <% } %>
           </div>
         </div>
+        <% } %>
         <% }) %>
     </div>
   </main>
