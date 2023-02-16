@@ -386,6 +386,17 @@ img {
 .parag-video a {
     color: blue;
 }
+/* .copyright {
+    background: #fff;
+    font-weight: 500;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.copyright span a {
+    color: inherit;
+    text-decoration: none;
+} */
 @media (max-width: 1000px) {
     .agrup a {
         width: 29vw;
@@ -445,6 +456,11 @@ img {
     .nada-special {
         width: 45px;
     }
+    /* .copyright {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    } */
 }
 @media (max-width: 495px) {
     #container {

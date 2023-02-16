@@ -72,27 +72,31 @@
             
             <label for="nivel">Nível:</label>
             <select type="text" name="nivel" id="nivel">
-              <% if (no.nivel == "Básico") { %>
+              <% switch (no.nivel) { 
+                case "Básico": %>
               <option></option>
               <option selected>Básico</option>
               <option>Intermediário</option>
               <option>Avançado</option>
-              <% } else if (no.nivel == "Intermediário") { %>
+              <% break;
+                case "Intermediário": %>
               <option></option>
               <option>Básico</option>
               <option selected>Intermediário</option>
               <option>Avançado</option>
-              <% } else if (no.nivel == "Avançado") { %>
+              <% break;
+                case "Avançado": %>
               <option></option>
               <option>Básico</option>
               <option>Intermediário</option>
               <option selected>Avançado</option>
-              <% } else { %>
+              <% break; 
+                default: %>
               <option selected></option>
               <option>Básico</option>
               <option>Intermediário</option>
               <option>Avançado</option>
-              <% } %>
+              <% break; } %>
             </select>
 
             <label for="linkImage">Link da Imagem:</label>
