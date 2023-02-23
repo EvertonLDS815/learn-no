@@ -80,7 +80,7 @@ main {
 }
 .nada {
     background: white;
-    max-width: 320px;
+    max-width: 300px;
     padding: 10px 15px;
     border-radius: 12px;
     box-shadow: 3px 3px 10px rgb(14 55 54 / 25%);
@@ -489,7 +489,7 @@ img {
         font-size: 17px;
     }
 }
-@media (max-width: 410px) {
+@media (max-width: 420px) {
     .header-search {
         margin-top: 30px;
     }
@@ -499,8 +499,11 @@ img {
     main {
         padding: 26px 0;
     }
-    .nada {
-        width: 78vw;
+    .container-card {
+        max-width: 80vw;
+        width: 88vw;
+        display: flex;
+        align-items: center;
     }
     .container h1 {
         padding: 0 25px;
@@ -514,6 +517,22 @@ img {
     }
     .container h1, #create-form h1, #update-form h1 {
         font-size: 25px;
+    }
+    .container-card .name-no {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .container-card .name-no a h3 {
+        padding-left: 10px;
+    }
+    .container-card .td-link img {
+        width: 88px;
+        aspect-ratio: 1/1;
+    }
+    .container-card .type {
+        padding-left: 18px;
     }
     #primer {
         width: 100px;
