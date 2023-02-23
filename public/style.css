@@ -500,7 +500,7 @@ img {
         padding: 26px 0;
     }
     .container-card {
-        max-width: 80vw;
+        max-width: initial;
         width: 88vw;
         display: flex;
         align-items: center;
@@ -528,8 +528,7 @@ img {
         padding-left: 10px;
     }
     .container-card .td-link img {
-        width: 88px;
-        aspect-ratio: 1/1;
+        width: 90px;
     }
     .container-card .type {
         padding-left: 18px;
