@@ -1,9 +1,16 @@
+
 const filterElement = document.getElementById("search-no");
 const cards = document.querySelectorAll(".nada");
 const view = document.querySelector("body");
 
 filterElement.addEventListener("input", filterNameCards);
+let lar = document.getElementById("lar");
 
+function scrollRoll() {
+    lar.innerHTML = view.clientWidth + 'px';
+}
+
+window.addEventListener("scroll", scrollRoll)
 function filterNameCards() {
     if (filterElement.value !== "") {
         for (let card of cards) {
