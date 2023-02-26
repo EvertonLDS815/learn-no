@@ -18,7 +18,6 @@
     <h1 id="title-page">Nós e Amarras
       <img src="/imgs/nos-e-amarras.jpg" alt="" id="img-especiality">
     </h1>
-    <h2 id="lar"></h2>
     <label class="container-label">
       <input id="search-no" type="text" placeholder="Digite um Nó" />
       <i class='bx bx-search icon-search'></i>
@@ -29,7 +28,7 @@
     <div id="container">
       <% group.forEach((no)=> { %>
         <% if (no.linkImage) { %>
-        <div class="nada container-card">
+          <div class="container-card">
           <div class="image-no">
             <a href="/page/<%= no._id%>" class="td-link">
               <img src="<%= no.linkImage%>" alt="<%= no.name%>" />

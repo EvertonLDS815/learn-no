@@ -78,7 +78,7 @@ main {
     gap: 22px;
     justify-items: center;
 }
-.nada {
+.container-card {
     background: white;
     max-width: 300px;
     padding: 10px 15px;
@@ -87,8 +87,10 @@ main {
     opacity: 0.9;
     transition: all 0.2s ease-in-out;
     position: relative;
+    display: flex;
+    flex-direction: column;
 }
-.nada:hover {
+.container-card:hover {
     opacity: 1;
     transform: scale(1.025);
 }
@@ -371,7 +373,7 @@ img {
 #img-especiality {
     width: 83px;
 }
-.nada-special {
+.container-card-special {
     width: 50px;
     position: absolute;
     bottom: 10px;
@@ -453,7 +455,7 @@ img {
     .card p {
         font-size: 18px;
     }
-    .nada-special {
+    .container-card-special {
         width: 45px;
     }
     /* .copyright {
@@ -503,6 +505,7 @@ img {
         max-width: initial;
         width: 88vw;
         display: flex;
+        flex-direction: row;
         align-items: center;
         padding: 10px;
     }

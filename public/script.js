@@ -1,14 +1,9 @@
 
 const filterElement = document.getElementById("search-no");
-const cards = document.querySelectorAll(".nada");
+const cards = document.querySelectorAll(".container-card");
 const view = document.querySelector("body");
 
 filterElement.addEventListener("input", filterNameCards);
-let lar = document.getElementById("lar");
-
-function scrollRoll() {
-    lar.innerHTML = view.clientWidth + 'px';
-}
 
 window.addEventListener("scroll", scrollRoll)
 function filterNameCards() {
@@ -20,20 +15,12 @@ function filterNameCards() {
             if (!title.includes(filterText)) {
                 card.style.display = "none";
             } else {
-                if (view.clientWidth > 420) {
-                    card.style.display = "initial";
-                } else {
                     card.style.display = "flex";
-                }
             }
         }
     } else {
         for (let card of cards) {
-            if (view.clientWidth > 420) {
-                card.style.display = "initial";
-            } else {
                 card.style.display = "flex";
-            }
         }
     }
 }
