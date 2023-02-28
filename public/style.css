@@ -509,6 +509,14 @@ img {
         align-items: center;
         padding: 10px;
     }
+    .block-card {
+        flex-direction: column;
+        padding: 15px;
+        width: 80vw;
+    }
+    .block-card .buttons {
+        width: 100%;
+    }
     .container h1 {
         padding: 0 25px;
     }
@@ -533,6 +541,9 @@ img {
     }
     .container-card .td-link img {
         width: 90px;
+    }
+    .block-card .td-link img {
+        width: 100%;
     }
     .container-card .type {
         padding-left: 18px;
