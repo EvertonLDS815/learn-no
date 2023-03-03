@@ -28,26 +28,28 @@
   <main>
     <div id="container">
       <% group.forEach((no)=> { %>
-        <div class="nada">
-          <div class="image-no">
-            <a href="/page/<%= no._id%>" class="td-link">
-              <img src="<%= no.linkImage%>" alt="<%= no.name%>" />
-            </a>
+        <% if (no.linkImage) { %>
+          <div class="nada">
+            <div class="image-no">
+              <a href="/page/<%= no._id%>" class="td-link">
+                <img src="<%= no.linkImage%>" alt="<%= no.name%>" />
+              </a>
+            </div>
+            <div class="name-no">
+              <a href="/page/<%= no._id%>">
+                <h3>
+                  <%= no.name%>
+                </h3>
+              </a>
+              <% if (no.type) { %>
+                <h3 class="type">Tipo: <%= no.type%></h3>
+              <% } %>
+              <% if (no.nivel) { %>
+                <h3 class="type">Nível: <%= no.nivel%></h3>
+              <% } %>
+            </div>
           </div>
-          <div class="name-no">
-            <a href="/page/<%= no._id%>">
-              <h3>
-                <%= no.name%>
-              </h3>
-            </a>
-            <% if (no.type) { %>
-              <h3 class="type">Tipo: <%= no.type%></h3>
-            <% } %>
-            <% if (no.nivel) { %>
-              <h3 class="type">Nível: <%= no.nivel%></h3>
-            <% } %>
-          </div>
-        </div>
+          <% } %>
         <% }) %>
     </div>
   </main>
