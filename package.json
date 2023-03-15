@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "description": "Meu Nodejs",
   "main": "index.js",
+  "engines": {
+    "node": "16.x"
+  },
   "scripts": {
-    "start": "node index",
+    "start": "node index.js",
     "dev": "nodemon index"
   },
   "author": "Everton Lino",
