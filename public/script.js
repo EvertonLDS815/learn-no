@@ -1,7 +1,9 @@
 const filterElement = document.getElementById("search-no");
+const clean = document.getElementById("clean");
 const cards = document.querySelectorAll(".nada");
 
 filterElement.addEventListener("input", filterNameCards);
+clean.addEventListener("click", filterNameCards);
 
 function filterNameCards() {
     if (filterElement.value !== "") {
@@ -43,4 +45,8 @@ function filterNameCards() {
 
 function goBack() {
     window.history.back();
+}
+
+function iconClick() {
+    filterElement.value = "";
 }
