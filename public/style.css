@@ -30,12 +30,13 @@ body.admin {
     width: 350px;
     display: block;
 }
-.icon-search {
+.icon-clean {
     color: #333;
-    font-size: 25px;
+    cursor: pointer;
+    font-size: 28px;
     position: absolute;
-    top: 8px;
-    right: 8px;
+    top: 7px;
+    right: 7px;
 }
 #search-no {
     color: #333;
