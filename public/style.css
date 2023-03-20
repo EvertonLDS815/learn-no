@@ -37,6 +37,11 @@ body.admin {
     position: absolute;
     top: 7px;
     right: 7px;
+    height: 26px;
+    width: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 #search-no {
     color: #333;
